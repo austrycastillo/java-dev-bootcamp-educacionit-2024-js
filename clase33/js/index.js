@@ -12,7 +12,7 @@
 // console.log(2 + 2 )
 // let y = 10
 // console.log(x*y)
-// //> >= < <= == === != ! 
+// //> >= < <= == === != !== ! 
 // let result = true
 // console.log(result)
 // console.log(!result)
