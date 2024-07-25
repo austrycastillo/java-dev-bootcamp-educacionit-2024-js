@@ -114,7 +114,7 @@ al final mostrar el mejor tiempo
 */
 let nombreAtletas = [];
 let tiempoAtletas = [];
-let menorTiempo = 100;
+let indice
 
 do {
     const name = prompt("escribí el nombre del atleta")
@@ -124,8 +124,11 @@ do {
 } while (window.confirm("desea agregar otro atleta?"));
 console.log(nombreAtletas)
 console.log(tiempoAtletas)
+let menorTiempo = tiempoAtletas[0]
 for (var i = 0; i < tiempoAtletas.length; i++) {
     if(tiempoAtletas[i]< menorTiempo )
         menorTiempo = tiempoAtletas[i]
+        indice = i
 }
-console.log(menorTiempo);
+let ganador = nombreAtletas[indice]
+console.log(`El atleta con el menor tiempo es ${ganador} con un tiempo de ${menorTiempo}`);
