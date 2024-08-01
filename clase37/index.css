@@ -1,0 +1,21 @@
+#padre{
+    background-color: lightblue;
+    width: 400px;
+    height: 400px;
+}
+#hijo{
+    background-color: rgb(73, 210, 52);
+    width: 200px;
+    height: 200px;
+}
+#nieta{
+    background-color: rgb(224, 220, 35);
+    width: 100px;
+    height: 100px;
+}
+.btnCorrecto{
+    border-color: green;
+}
+.btnIncorrecto{
+    border-color: red;
+}
