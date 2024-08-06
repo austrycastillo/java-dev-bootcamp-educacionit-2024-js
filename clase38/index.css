@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgb(220, 236, 241);
+}
+label{
+    display: block;
+    padding: 10px;
+}
+input{
+    width: 40%;
+    height: 40px;
+    margin-top: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+}
+.enviar{
+    background-color: coral;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.enviar:hover{
+    background-color: rgb(188, 74, 32);
+}
+.s-nombre,
+.s-edad,
+.s-email{
+    display: none;
+}
+.s-nombre-error,
+.s-edad-error,
+.s-email-error{
+    display: block;
+    color: red;
+}
+.i-correcto{
+    border: 2px solid green;
+    box-shadow: 3px 4px  rgb(182, 173, 173,0.4);
+    
+}
+.i-incorrecto{
+    border: 2px solid red;
+    box-shadow: 3px 4px  rgb(182, 173, 173,0.4);
+    
+}
