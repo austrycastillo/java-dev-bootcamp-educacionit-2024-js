@@ -1,0 +1,7 @@
+Mario - Leonel
+Franco - Lucas
+Isabel - Carolina
+
+
+De la imagen del juego piedra-papel o tijera
+armar un html, manejar el DOM, agregar css y a través de Js agregar eventos, agregar oyentes si lo requiere, funciones, random Math, floor, armar una lógica del juego.

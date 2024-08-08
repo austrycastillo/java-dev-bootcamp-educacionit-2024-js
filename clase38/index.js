@@ -72,28 +72,92 @@ let campos = {
     edad: false,
     email: false
 }
-let nombre = document.querySelector('#nombre')
+let s_nombre = document.querySelector('.s-nombre')
+let s_edad = document.querySelector('.s-edad')
+let s_email = document.querySelector('.s-email')
 let validar = e => {
     // console.log('estoy validando')
     // console.log(e.target)
     // console.log(e.target.id)
     // console.log(e.target.value)
     // console.log(e.target.name)
-    switch(e.target.name){
+    switch (e.target.name) {
         case 'nombre':
-            if(exp.nombre.test(e.target.value)){
-                //console.log('si')
+            // console.log('estoy en el caso')
+            // console.log(exp.nombre)
+            // console.log(e.target.value)
+            // console.log(e.target)
+            if (exp.nombre.test(e.target.value)) {
+                // console.log('si')
                 // e.target.classList.add('i-correcto')
-                nombre.classList.add('i-correcto')
-            }else{
-                //console.log('nop')
+                e.target.classList.add('i-correcto');
+                e.target.classList.remove('i-incorrecto');
+                s_nombre.classList.remove('s-nombre-error');
+                campos.nombre = true;
+            } else {
+                // console.log('nop')
                 // e.target.classList.add('i-incorrecto')
-                nombre.classList.add('i-incorrecto')
+                e.target.classList.add('i-incorrecto');
+                e.target.classList.remove('i-correcto');
+                s_nombre.classList.add('s-nombre-error');
+                campos.nombre = false;
             }
-        break;
-        
+            break;
+        case 'edad':
+            // console.log('estoy en el caso')
+            // console.log(exp.nombre)
+            // console.log(e.target.value)
+            // console.log(e.target)
+            if (exp.edad.test(e.target.value)) {
+                // console.log('si')
+                // e.target.classList.add('i-correcto')
+                e.target.classList.add('i-correcto');
+                e.target.classList.remove('i-incorrecto');
+                s_edad.classList.remove('s-edad-error');
+                campos.edad = true;
+            } else {
+                // console.log('nop')
+                // e.target.classList.add('i-incorrecto')
+                e.target.classList.add('i-incorrecto');
+                e.target.classList.remove('i-correcto');
+                s_edad.classList.add('s-edad-error');
+                campos.edad = false;
+            }
+            break;
+        case 'email':
+            // console.log('estoy en el caso')
+            // console.log(exp.nombre)
+            // console.log(e.target.value)
+            // console.log(e.target)
+            if (exp.email.test(e.target.value)) {
+                // console.log('si')
+                // e.target.classList.add('i-correcto')
+                e.target.classList.add('i-correcto');
+                e.target.classList.remove('i-incorrecto');
+                s_email.classList.remove('s-email-error');
+                campos.email = true;
+            } else {
+                // console.log('nop')
+                // e.target.classList.add('i-incorrecto')
+                e.target.classList.add('i-incorrecto');
+                e.target.classList.remove('i-correcto');
+                s_email.classList.add('s-email-error');
+                campos.email = false
+            }
+            break;
+
     }
 }
 inputs.forEach(input =>
     input.addEventListener('keyup', validar)
-)
+);
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    if (campos.nombre && campos.edad && campos.email) {
+        console.log('enviamos el form');
+        //e.target.submit();
+    } else {
+        console.log('no enviamos');
+    }
+});
