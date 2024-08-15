@@ -1,0 +1,13 @@
+.peli{
+    width: 90%;
+}
+button{
+    background-color: goldenrod;
+    padding: 10px 15px;
+}
+.red{
+    color: red;
+}
+.oculta{
+    display: none;
+}
