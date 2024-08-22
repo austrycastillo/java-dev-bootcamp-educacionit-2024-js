@@ -59,12 +59,15 @@
 //MÉTODOS: setItem, getItem, clear, removeItem
 function registrarLocal() {
     // console.log(document.form)
-    let fruta = document.getElementById("fruta");
-    let dulce = document.getElementById("dulce");
-    document.form.fruta.value
-    localStorage.setItem("fruta", document.form.fruta.value);
-    localStorage.setItem("dulce", document.form.dulce.value);
+    // let fruta = document.getElementById("fruta");
+    // let dulce = document.getElementById("dulce");
+    let texto = "Hoy tengo ganas de cantar";
+    // document.form.fruta.value
+    localStorage.setItem("texto", texto);
+    // localStorage.setItem("dulce", document.form.dulce.value);
 }
+registrarLocal();
+console.log(localStorage.getItem('texto'));
 
 document.querySelector("a").addEventListener("click", e => {
     e.preventDefault();
